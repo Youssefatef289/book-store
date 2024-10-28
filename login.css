@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", serif;
+  text-decoration: none;
+}
+
+
+
+header{
+  width: 100%;
+  position:fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: aliceblue;
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+header .logo{
+  font-size: 30px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+
+}
+
+nav a{
+  font-size: 18px;
+  text-transform: capitalize;
+  text-decoration: none;
+  margin: 15px;
+  padding: 8px;
+  color: #111;
+  font-weight: bold;
+  border-bottom: solid transparent 3px;
+  transition: .3s ease;
+}
+nav a:hover{
+  transition: 0.5s;
+  border-bottom: solid #c87e4f 3px;
+  color: #c87e4f;
+}
+.btn-1{
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #c87e4f;
+  color: #fff;
+  border-radius: 10px;
+  transition: .3s ease;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+
+}
+.btn-1:hover {
+  border: 2px solid #c87e4f;
+  background-color: white;
+  color: #c87e4f;
+
+
+}
+#chek{
+  display: none;
+}
+#chek:checked ~ nav{
+  left: 0;
+  opacity: 1;
+}
+
+/* label{
+  font-size: 35px;
+  cursor: pointer;
+  color: #111;
+  display: none;
+} */
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width:898px){
+  header{
+    padding: 4%;
+    transition: .3s ease;
+  }
+  nav a{
+    margin: 10px;
+    transition: .3s ease;
+  }
+}
+@media(max-width:798px){
+  header nav {
+    position: absolute;
+    left: -100%;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    transition: .3s ease;
+  opacity: 0;
+
+  }
+    header nav a{
+      display: block;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 0 10px #0050d5;
+      border-radius: 10px;
+      margin-top: 30px;
+      font-size: 22px;
+    }
+
+  label{
+    display: block;
+  }
+}
+
+
+header .button {
+  background-color: #c87e4f;
+  text-align: center;
+}
+
+
+
+
+/* form login */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  margin-top: 200px;
+  margin-left: 550px;
+
+}
+
+.title {
+  font-size: 28px;
+  color: royalblue;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.title::before,.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: royalblue;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+  background-color: royalblue;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message, .signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a {
+  color: royalblue;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid + span {
+  color: green;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  background-color: royalblue;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+}
+
+.submit:hover {
+  background-color: rgb(56, 90, 194);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
